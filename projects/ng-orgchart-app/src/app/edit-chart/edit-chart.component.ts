@@ -3,7 +3,8 @@ import { FormControl } from '@angular/forms';
 import { from } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
 import JSONDigger from 'json-digger';
-import uuid from 'uuid/v4';
+// import uuid from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-edit-chart',
@@ -81,7 +82,7 @@ export class EditChartComponent implements OnInit {
   async addChildNode2Datasource() {
     await Promise.all(this.selectedNodes.map((node) => {
       return this.dsDigger.addChildren(node.id, {
-        id: uuid(),
+        id: uuidv4(),
         name: this.newNodeName.value,
         title: this.newNodeTitle.value
       });
@@ -98,7 +99,7 @@ export class EditChartComponent implements OnInit {
   async addSiblingNode2Datasource() {
     await Promise.all(this.selectedNodes.map((node) => {
       return this.dsDigger.addSiblings(node.id, {
-        id: uuid(),
+        id: uuidv4(),
         name: this.newNodeName.value,
         title: this.newNodeTitle.value
       });
@@ -114,7 +115,7 @@ export class EditChartComponent implements OnInit {
 
   addRootNode() {
     this.dsDigger.addRoot({
-      id: uuid(),
+      id: uuidv4(),
       name: this.newNodeName.value,
       title: this.newNodeTitle.value
     });

@@ -26,5 +26,13 @@
         "dist/ng-orgchart/*"
       ]
     }
+  },
+   "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "enableIvy": true,
+    "compilationMode": "partial"
   }
 }
