@@ -1,7 +1,7 @@
 {
-  "name": "@ano/ng-orgchart",
+  "name": "@anorangga/ng-orgchart",
   "description": "organization chart component based angular 12.2.0",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "peerDependencies": {
     "@angular/common": "~12.2.0",
     "@angular/core": "~12.2.0"

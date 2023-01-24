@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartContainerComponent } from './chart-container/chart-container.component';
 import { ChartNodeComponent } from './chart-node/chart-node.component';
 import { NodeSelectService } from './shared/services/node-select.service';
@@ -9,7 +9,7 @@ import { NodeSelectService } from './shared/services/node-select.service';
   declarations: [ChartContainerComponent, ChartNodeComponent],
   imports: [
     CommonModule,
-    BrowserAnimationsModule
+    // BrowserAnimationsModule
   ],
   exports: [ChartContainerComponent, ChartNodeComponent],
   providers: [NodeSelectService],
