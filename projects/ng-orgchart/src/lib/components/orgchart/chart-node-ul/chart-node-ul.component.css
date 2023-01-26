@@ -245,7 +245,7 @@
 .orgchart .node .title {
   box-sizing: border-box;
   padding: 2px;
-  width: 130px;
+  width: auto;
   text-align: center;
   font-size: 0.75rem;
   font-weight: bold;
@@ -303,7 +303,7 @@
 .orgchart .node .content {
   box-sizing: border-box;
   padding: 2px;
-  height: 20px;
+  height: auto;
   font-size: 0.625rem;
   border: 1px solid rgba(217, 83, 79, 0.8);
   border-radius: 0 0 4px 4px;

@@ -1,7 +1,7 @@
 <div [class]="isRoot ? 'orgchart' : ''">
     <ul
         class="nodes" 
-        *ngIf="arrDataSource"
+        *ngIf="arrDataSource.length > 0"
     >
         <ng-container 
             *ngFor="let node of arrDataSource;let i=index"
