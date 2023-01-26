@@ -11,6 +11,7 @@ export class DefaultChartComponent implements OnInit {
     id: '1',
     name: 'Lao Lao',
     title: 'general manager',
+    color: 'success',
     children: [
       { id: '2', name: 'Bo Miao', title: 'department manager' },
       {
@@ -29,7 +30,7 @@ export class DefaultChartComponent implements OnInit {
               { id: '8', name: 'Xiang Xiang', title: 'engineer' },
               { id: '9', name: 'Ke Xin', title: 'engineer' },
               { id: '10', name: 'Xiao Dan', title: 'engineer' },
-              { id: '11', name: 'Dan Dan Zai', title: 'engineer' }
+              { id: '11', name: 'Dan Dan Zai', title: 'engineer',color:'success' },
             ]
           },
           { id: '12', name: 'Pang Pang', title: 'senior engineer' },

@@ -3,7 +3,34 @@
 	<div class="orgchart" [ngClass]="chartClass" [ngStyle]="{'transform': transformVal, 'cursor': cursorVal}"
 		(mousedown)="pan ? panStartHandler($event) : true" (mousemove)="pan && panning ? panHandler($event) : true"
 		(click)="onClickChart($event)">
-		<orgchart-node [datasource]="datasource" [nodeHeading]="nodeHeading" [nodeContent]="nodeContent"
-			[nodeTemplate]="nodeTemplate" [groupScale]="groupScale" [select]="select" (nodeClick)="onNodeClick($event)"></orgchart-node>
+		<ng-container
+			*ngIf="type=='list'"
+		>
+			<lib-chart-node-ul 
+				[datasource]="datasource" 
+				[nodeHeading]="nodeHeading" 
+				[nodeContent]="nodeContent"
+				[nodeColor]="nodeColor"
+				[nodeTemplate]="nodeTemplate" 
+				[groupScale]="groupScale" 
+				[select]="select" 
+				(nodeClick)="onNodeClick($event)"
+			>
+			</lib-chart-node-ul>
+		</ng-container>	
+		<ng-container
+			*ngIf="type=='div'"
+		>
+			<orgchart-node
+				[datasource]="datasource" 
+				[nodeHeading]="nodeHeading" 
+				[nodeContent]="nodeContent"
+				[nodeTemplate]="nodeTemplate" 
+				[groupScale]="groupScale" 
+				[select]="select" 
+				(nodeClick)="onNodeClick($event)"
+			>
+			</orgchart-node>
+		</ng-container>
 	</div>
 </div>

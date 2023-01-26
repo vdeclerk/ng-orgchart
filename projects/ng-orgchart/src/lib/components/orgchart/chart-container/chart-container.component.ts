@@ -11,6 +11,7 @@ export class ChartContainerComponent implements OnInit {
   @Input() datasource;
   @Input() nodeHeading = 'name';
   @Input() nodeContent = 'title';
+  @Input() nodeColor = 'color';
   @Input() nodeTemplate: TemplateRef<any>;
   @Input() groupScale = 3;
   @Input() pan = false;
@@ -20,6 +21,7 @@ export class ChartContainerComponent implements OnInit {
   @Input() containerClass = '';
   @Input() chartClass = '';
   @Input() select = 'single';
+  @Input() type = 'list';
 
   @Output() nodeClick = new EventEmitter<any>();
   @Output() chartClick = new EventEmitter();

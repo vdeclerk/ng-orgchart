@@ -1,0 +1,36 @@
+<div [class]="isRoot ? 'orgchart' : ''">
+    <ul
+        class="nodes" 
+        *ngIf="arrDataSource"
+    >
+        <ng-container 
+            *ngFor="let node of arrDataSource;let i=index"
+        >      
+            <li class="hierarchy">
+                <ng-container
+                    *ngTemplateOutlet="nodeTemplate ? nodeTemplate : defaultNodeTemplate; context:{ arrDataSource:arrDataSource[i],nodeHeading: nodeHeading, nodeContent: nodeContent,nodeColor:nodeColor }">
+                </ng-container>
+                <ng-container
+                    *ngIf="node.children"
+                >
+                    <lib-chart-node-ul 
+                        [arrDataSource]="node.children"
+                        [isRoot]="false"
+                        [nodeHeading]="nodeHeading" 
+                        [nodeContent]="nodeContent" 
+                        [nodeColor]="nodeColor"
+                    >
+                    </lib-chart-node-ul>
+                </ng-container>
+            </li>
+            
+        </ng-container>
+    </ul>
+
+    <ng-template #defaultNodeTemplate let-nodeData="arrDataSource" let-heading="nodeHeading" let-content="nodeContent" let-color="nodeColor">
+        <div class="node">
+            <div class="title" [ngClass]="nodeData[color]">{{nodeData[heading]}}</div>
+            <div class="content">{{nodeData[content]}}</div>
+        </div>                
+    </ng-template>
+</div>
