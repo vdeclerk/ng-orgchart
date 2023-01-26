@@ -19,18 +19,21 @@
 - chartClass
 - select
 
+- new:
+  type:'list' or 'div'
+
 # Output Properties:
 - nodeClick
 - chartClick
 
 # Install
-npm install @dabeng/ng-orgchart
-
-# [Demo](https://stackblitz.com/edit/ng-orgchart-demo)
+npm install @anorangga/ng-orgchart
+Fork from @dabeng/ng-orgchart
+add UL nested
 
 # NgOrgchart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
 ## Development server
 
