@@ -13,14 +13,17 @@
                 <ng-container
                     *ngIf="node.children"
                 >
-                    <lib-chart-node-ul 
-                        [arrDataSource]="node.children"
-                        [isRoot]="false"
-                        [nodeHeading]="nodeHeading" 
-                        [nodeContent]="nodeContent" 
-                        [nodeColor]="nodeColor"
-                    >
-                    </lib-chart-node-ul>
+                    <ng-container *ngIf="node.children.length > 0">
+                        <lib-chart-node-ul 
+                            [arrDataSource]="node.children"
+                            [isRoot]="false"
+                            [nodeHeading]="nodeHeading" 
+                            [nodeContent]="nodeContent" 
+                            [nodeColor]="nodeColor"
+                        >
+                        </lib-chart-node-ul>
+                    </ng-container>
+                    
                 </ng-container>
             </li>
             
