@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,TemplateRef,Output,EventEmitter} from '@angular/core';
+import { Component, OnInit,Input,TemplateRef,Output,EventEmitter, SimpleChange} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Node } from '../shared/models/node.model'
 import { NodeSelectService } from '../shared/services/node-select.service';
@@ -72,9 +72,13 @@ export class ChartNodeUlComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("cek",this.arrDataSource);
-    if (!this.arrDataSource)
-      this.arrDataSource = [this.datasource];
+  }
+
+  ngOnChanges(changes:any){
+    if (changes.datasource){
+      if (changes.datasource.currentValue) this.arrDataSource = [changes.datasource.currentValue];
+    }
+    
   }
 
   toggleChildren() {

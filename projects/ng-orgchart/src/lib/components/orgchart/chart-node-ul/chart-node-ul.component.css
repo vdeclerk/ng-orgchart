@@ -127,7 +127,7 @@
 }
 
 .orgchart .hierarchy:not(.hidden):only-child::before {
-  /* width: 2px; */
+  width: 2px;
 }
 
 .orgchart > .nodes > .hierarchy::before,
